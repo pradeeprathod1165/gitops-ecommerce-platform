@@ -14,11 +14,13 @@ spec:
       labels:
         app: ecommerce-backend
     spec:
+      imagePullSecrets:
+      - name: ghcr-secret
       containers:
       - name: backend
-        image: ghcr.io/pradeeprathod1165/gitops-ecommerce-platform:latest 
+        image: ghcr.io/pradeeprathod1165/gitops-ecommerce-platform:latest
         ports:
-        - containerPort: 3000 # Adjust if your server.js uses a different port
+        - containerPort: 3000
         resources:
           requests:
             cpu: "100m"

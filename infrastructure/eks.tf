@@ -21,12 +21,12 @@ module "eks" {
       max_size     = 4
       desired_size = 3
 
-      instance_types = ["t3.micro"]
+      # Upgrade to 2GB RAM to support Argo CD + Your App
+      instance_types = ["t3.small"]
       capacity_type  = "ON_DEMAND"
 
       ami_type = "AL2023_x86_64_STANDARD"
 
-      # AL2023 native YAML config to unlock 28 pods per node
       cloudinit_pre_nodeadm = [
         {
           content_type = "application/node.eks.aws"
