@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000 # Must match the containerPort above
+      targetPort: 8080 # Must match the containerPort above
   type: ClusterIP

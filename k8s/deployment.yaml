@@ -14,13 +14,12 @@ spec:
       labels:
         app: ecommerce-backend
     spec:
-      imagePullSecrets:
-      - name: ghcr-secret
       containers:
       - name: backend
-        image: ghcr.io/pradeeprathod1165/gitops-ecommerce-platform:latest
+        # Change this to match your actual pushed image path:
+        image: docker.io/pradeep61/inventory-api:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
         resources:
           requests:
             cpu: "100m"
