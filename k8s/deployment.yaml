@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: inventory-api:latest 
+        image: ghcr.io/pradeeprathod1165/gitops-ecommerce-platform:latest 
         ports:
         - containerPort: 3000 # Adjust if your server.js uses a different port
         resources:
