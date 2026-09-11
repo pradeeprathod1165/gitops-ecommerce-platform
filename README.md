@@ -87,13 +87,3 @@ An enterprise-grade, cloud-native microservice deployment built on **AWS EKS**, 
                                   │
                           [ Local Browser ]
                           http://localhost:3000
-
-Domain,Technology,Purpose
-Cloud Provider,AWS,"Hosting VPC, subnets, NAT Gateways, IAM, and managed compute"
-Infrastructure as Code,Terraform,Automated provisioning of VPC and EKS infrastructure
-Orchestration,Kubernetes (EKS 1.34),"Container scheduling, self-healing, networking, and secret handling"
-GitOps Engine,Argo CD,Declarative continuous delivery and state synchronization from Git
-CI / Automation,GitHub Actions,Automated image building and pushing to container registry
-Artifact Registry,GHCR,Secure private container registry for application packages
-Container Runtime,Docker (node:20-alpine),Lightweight container runtime and packaging
-Application Layer,Node.js,Microservice backend serving a responsive storefront dashboard
