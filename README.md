@@ -156,11 +156,11 @@ kubectl create secret docker-registry ghcr-secret \
 ```bash
 # Install Argo CD
 kubectl create namespace argocd
-kubectl apply -n argocd -f [https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml](https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml)
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 # Create and sync application
 argocd app create ecommerce-platform \
-  --repo [https://github.com/](https://github.com/)<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY_NAME>.git \
+  --repo https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY_NAME>.git \
   --path k8s \
   --dest-server [https://kubernetes.default.svc](https://kubernetes.default.svc) \
   --dest-namespace default
